@@ -8,12 +8,12 @@ import iphone from '@/assets/images/iphone.png'
   <RouterView class="view"/>
 
   <div class="mobile">
-    <div class="text">Hey, il n'y a pas de version mobile sur le site! Peut-être qu'un jour je ferais un téléphone qui sait ?</div>
+    <div class="text">Hey, il n'y a pas de version mobile sur le site! Peut-être qu'un jour tu pourras le voir aussi ferais un téléphone qui sait ?</div>
 
     <div class="iphone">
       <img class="image" :src="iphone" alt="iphone" />
 
-      <div class="smile">:)</div>
+      <div class="smile">⏳ :)</div>
     </div>
   </div>
 </template>
