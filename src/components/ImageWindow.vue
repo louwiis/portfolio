@@ -11,6 +11,7 @@ const { id } = defineProps({
 });
 
 const image = tabsStore.getTabById(id);
+const imageUrl = new URL('/src/assets/images/' + image?.src, import.meta.url);
 </script>
 
 <template>
@@ -20,7 +21,7 @@ const image = tabsStore.getTabById(id);
         <!-- make a conditionnal style -->
         <img 
           class="img"
-          :src="'/src/assets/images/' + image.src"
+          :src="imageUrl"
           :alt="image.src"
           :style="{ width: image.isFullscreen ? '100%' : image.width + 'px', height: image.isFullscreen ? '100%' : image.height - 28 + 'px' }"
           :class="{ portrait: image.ratio < image.width / image.height, landscape: image.ratio > image.width / image.height }"
