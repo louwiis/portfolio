@@ -8,7 +8,7 @@ import iphone from '@/assets/images/iphone.png'
   <RouterView class="view"/>
 
   <div class="mobile">
-    <div class="text">Hey, il n'y a pas de version mobile sur le site! Peut-être qu'un jour tu pourras le voir aussi ferais un téléphone qui sait ?</div>
+    <div class="text">Hey, désolé mais il n'y a actuellement pas de version mobile du site! Mais bon, peut-être qu'un jour tu pourras toi aussi accéder au sis qui sait...</div>
 
     <div class="iphone">
       <img class="image" :src="iphone" alt="iphone" />
@@ -39,8 +39,11 @@ import iphone from '@/assets/images/iphone.png'
       color: #fff;
       font-size: 24px;
       font-weight: bold;
-      padding: 256px 32px;
       text-align: center;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
     }
 
     .iphone {
