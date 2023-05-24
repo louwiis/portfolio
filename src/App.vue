@@ -52,7 +52,6 @@ import iphone from '@/assets/images/iphone.png'
       width: 100%;
       position: relative;
       margin-top: 75vh;
-      margin-bottom: 10vh;
 
       .image {
         width: 100%;
@@ -61,7 +60,7 @@ import iphone from '@/assets/images/iphone.png'
       .smile {
         position: absolute;
 
-        top: 50%;
+        top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 64px;
