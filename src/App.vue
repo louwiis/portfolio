@@ -51,7 +51,7 @@ import iphone from '@/assets/images/iphone.png'
     .iphone {
       width: 100%;
       position: relative;
-      margin-top: 50vh;
+      margin-top: 75vh;
 
       .image {
         width: 100%;
