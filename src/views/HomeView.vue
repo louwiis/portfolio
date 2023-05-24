@@ -12,6 +12,7 @@ const terminal = tabsStore.getTabById('terminal');
 const experiences = tabsStore.getTabById('experiences');
 const agily = tabsStore.getTabById('agily');
 
+const folders = tabsStore.state.folders;
 const images = tabsStore.state.pictures;
 </script>
 
@@ -21,15 +22,14 @@ const images = tabsStore.state.pictures;
     <Icon id="experiences" :x="16" :y="144" />
     
     <TerminalWindow v-if="terminal?.isOpened" />
-    <FolderWindow v-if="experiences?.isOpened" :id="experiences.id"/>
-    <FolderWindow v-if="agily?.isOpened" :id="agily.id"/>
+
+    <FolderWindow v-for="folder in folders" :id="folder.id"/>
 
     <ImageWindow v-for="image in images" :id="image.id"/>
 
     <div v-if="tabsStore.getActiveTabs().length > 0" class="menu">
       <div v-for="tab in tabsStore.getActiveTabs()" :key="tab.id" class="app">
         <img :src="tab.icon" :alt="tab.name" @click="tabsStore.openTab(tab.id)" />
-        <!-- <Icon :id="tab.id" /> -->
 
         <div v-if="tab.isMinimized" class="minimize"></div>
       </div>
@@ -77,8 +77,8 @@ main {
 
       .minimize {
         position: absolute;
-        top: -4px;
-        right: -4px;
+        top: -6px;
+        right: -6px;
         width: 16px;
         height: 16px;
         border-radius: 50%;

@@ -1,10 +1,69 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+
+import iphone from '@/assets/images/iphone.png'
 </script>
 
 <template>
-  <RouterView />
+  <RouterView class="view"/>
+
+  <div class="mobile">
+    <div class="text">Hey, il n'y a pas de version mobile sur le site! Peut-être qu'un jour je ferais un téléphone qui sait ?</div>
+
+    <div class="iphone">
+      <img class="image" :src="iphone" alt="iphone" />
+
+      <div class="smile">:)</div>
+    </div>
+  </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .view {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    overflow: scroll;
+
+    .text {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 256px 32px;
+      text-align: center;
+    }
+
+    .iphone {
+      width: 100%;
+      position: relative;
+
+      .image {
+        width: 100%;
+      }
+
+      .smile {
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 64px;
+
+        color: #fff;
+        font-weight: bold;
+
+      }
+    }
+  }
+}
 </style>

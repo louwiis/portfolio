@@ -50,7 +50,7 @@ const folder = tabsStore.getTabById(id);
     display: grid;
     flex-wrap: wrap;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 12px;
+    row-gap: 12px;
 
     height: fit-content;
     width: 100%;

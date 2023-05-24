@@ -50,8 +50,8 @@ const drag = (e: MouseEvent) => {
 <template>
   <div
     class="icon"
+    :class="{ image: tab?.ratio }"
     :style="{ top: y + 'px', left: x + 'px' }"
-    :class="{ image: tab?.type === 'image' }"
     @dblclick="
       () => {
         tabsStore.openTab(id)
@@ -79,6 +79,12 @@ const drag = (e: MouseEvent) => {
   cursor: pointer;
   user-select: none;
   gap: 8px;
+
+  &.image {
+    img {
+      border: 3px solid white;
+    }
+  }
 
   img {
     max-width: 70px;
