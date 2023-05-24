@@ -5,7 +5,7 @@ import iphone from '@/assets/images/iphone.png'
 </script>
 
 <template>
-  <RouterView class="view"/>
+  <RouterView class="view" />
 
   <div class="mobile">
     <div class="text">Hey, désolé mais il n'y a actuellement pas de version mobile du site! Mais bon, tu pourras un jour découvrir Luis sur ton téléphone, qui sait ?</div>
