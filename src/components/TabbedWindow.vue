@@ -114,6 +114,8 @@ const drag = (e: MouseEvent) => {
   border-radius: 10px;
   overflow: hidden;
   font-size: 13px;
+
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.4);
   
   &.fullscreen {
     position: fixed;
@@ -194,7 +196,6 @@ const drag = (e: MouseEvent) => {
       align-items: center;
       justify-content: center;
     }
-
   }
 
   .resize {

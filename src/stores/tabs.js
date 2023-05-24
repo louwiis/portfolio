@@ -32,8 +32,8 @@ export const tabsStore = reactive({
         isActive: false,
         width: 600,
         height: 400,
-        x: 0,
-        y: 0,
+        x: 100,
+        y: 100,
         files: [
           {
             id: 'agily',
@@ -50,8 +50,8 @@ export const tabsStore = reactive({
         isActive: false,
         width: 600,
         height: 400,
-        x: 0,
-        y: 0,
+        x: 120,
+        y: 120,
         files: [
           {
             id: 'agily-picture',
@@ -71,8 +71,8 @@ export const tabsStore = reactive({
         isActive: false,
         width: 600,
         height: 400,
-        x: 0,
-        y: 0, 
+        x: 140,
+        y: 140, 
         ratio: '1.5'
       },
     ],

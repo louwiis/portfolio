@@ -37,8 +37,14 @@ const folder = tabsStore.getTabById(id);
   display: flex;
   flex-wrap: wrap;
   height: 100%;
-  overflow-y: scroll;
 
+  overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .icons {
     display: grid;
