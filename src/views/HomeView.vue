@@ -9,8 +9,6 @@ import FolderWindow from '../components/FolderWindow.vue';
 import ImageWindow from '../components/ImageWindow.vue';
 
 const terminal = tabsStore.getTabById('terminal');
-const experiences = tabsStore.getTabById('experiences');
-const agily = tabsStore.getTabById('agily');
 
 const folders = tabsStore.state.folders;
 const images = tabsStore.state.pictures;
@@ -46,7 +44,7 @@ main {
   background-size: cover;
 
   .menu {
-    position: fixed;
+    position: fixed !important;
     display: flex;
     flex-direction: row;
     bottom: 0;
@@ -61,7 +59,6 @@ main {
     align-items: center;
     gap: 8px;
 
-
     .icon {
       position: inherit;
 
@@ -71,7 +68,13 @@ main {
     }
 
     .app {
+      height: 60px;
       position: relative;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       img {
         width: 60px;
@@ -79,12 +82,14 @@ main {
 
       .minimize {
         position: absolute;
-        top: -6px;
-        right: -6px;
-        width: 16px;
-        height: 16px;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 5px;
+        height: 5px;
         border-radius: 50%;
-        background-color: #FF0000;
+        background-color: rgba(#fff, 0.4);
         color: #FFFFFF;
         display: flex;
         justify-content: center;
