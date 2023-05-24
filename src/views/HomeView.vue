@@ -50,7 +50,7 @@ main {
     bottom: 0;
     right: 0;
     left: 0;
-    padding: 8px 16px;
+    padding: 8px 16px 12px;
     background-color: rgba(#FFFFFF, 0.1);
     border: 1px solid rgba(#FFFFFF, 0.2);
     border-radius: 8px;
@@ -82,7 +82,7 @@ main {
 
       .minimize {
         position: absolute;
-        bottom: -5px;
+        bottom: -8px;
         left: 0;
         right: 0;
         margin: auto;
