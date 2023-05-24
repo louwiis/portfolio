@@ -34,21 +34,24 @@ import iphone from '@/assets/images/iphone.png'
     height: 100vh;
     width: 100vw;
     overflow: scroll;
+    position: relative;
 
     .text {
       color: #fff;
       font-size: 24px;
       font-weight: bold;
       text-align: center;
-      height: 70vh;
+      height: 50vh;
       display: flex;
       align-items: center;
-      padding: 0 16px;
+      padding: 0 32px;
+      position: fixed;
     }
 
     .iphone {
       width: 100%;
       position: relative;
+      margin-top: 50vh;
 
       .image {
         width: 100%;
