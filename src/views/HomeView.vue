@@ -20,6 +20,7 @@ const images = tabsStore.state.pictures;
   <main>
     <Icon id="terminal" :x="16" :y="16" />
     <Icon id="experiences" :x="16" :y="144" />
+    <Icon id="trash" :x="144" :y="16" />
     
     <TerminalWindow v-if="terminal?.isOpened" />
 
@@ -41,7 +42,8 @@ const images = tabsStore.state.pictures;
 main {
   height: 100vh;
   width: 100vw;
-  background: url(@/assets/images/wallpaper.jpg) no-repeat center center fixed;
+  background: url(@/assets/images/wallpaper.jpg) center center fixed;
+  background-size: cover;
 
   .menu {
     position: fixed;

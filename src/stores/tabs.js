@@ -3,6 +3,7 @@ import terminal from '../assets/images/terminal.png'
 import folder from '../assets/images/folder.png'
 import wallpaper from '../assets/images/wallpaper.jpg'
 import note from '../assets/images/note.png'
+import trash from '../assets/images/trash.png'
 
 import agilyLogo from '../assets/images/agily-logo.svg'
 import agilyTeam from '../assets/images/agily-team.webp'
@@ -67,6 +68,26 @@ export const tabsStore = reactive({
         id: 'agily-pictures',
         icon: folder,
         name: 'Quelques photos',
+        isOpened: false,
+        isMinimized: false,
+        isFullscreen: false,
+        width: 600,
+        height: 400,
+        x: 120,
+        y: 120,
+        files: [
+          {
+            id: 'agily-logo',
+          },
+          {
+            id: 'agily-team',
+          },
+        ],
+      },
+      {
+        id: 'trash',
+        icon: trash,
+        name: 'Corbeille',
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
