@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import tabsStore from '../stores/tabs';
+import { computed } from 'vue';
 
 import Icon from '../components/Icon.vue';;
 
@@ -14,7 +15,7 @@ const agily = tabsStore.getTabById('agily');
 const images = tabsStore.state.pictures;
 
 const getImageUrl = (url) => {
-  return new URL('/src/assets/images/' + url, import.meta.url);
+  return computed(() => new URL('/src/assets/images/' + url, import.meta.url));
 }
 </script>
 
@@ -31,7 +32,8 @@ const getImageUrl = (url) => {
 
     <div v-if="tabsStore.getActiveTabs().length > 0" class="menu">
       <div v-for="tab in tabsStore.getActiveTabs()" :key="tab.id" class="app">
-        <img :src="getImageUrl(tab.icon)" :alt="tab.name" @click="tabsStore.openTab(tab.id)" />
+        <!-- <img :src="getImageUrl(tab.icon)" :alt="tab.name" @click="tabsStore.openTab(tab.id)" /> -->
+        <Icon :id="tab.id" />
 
         <div v-if="tab.isMinimized" class="minimize"></div>
       </div>
@@ -58,9 +60,16 @@ main {
     border-radius: 8px;
     margin: 12px auto;
     width: fit-content;
-    gap: 8px;
     align-items: center;
 
+
+    .icon {
+      position: inherit;
+
+      :deep(.name) {
+        display: none;
+      }
+    }
 
     .app {
       position: relative;

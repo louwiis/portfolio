@@ -1,7 +1,7 @@
 <script setup>
 import tabsStore from '../stores/tabs';
 import TabbedWindow from './TabbedWindow.vue';
-import { ref, defineProps } from 'vue';
+import { computed, defineProps } from 'vue';
 
 const { id } = defineProps({
   id: {
@@ -11,7 +11,7 @@ const { id } = defineProps({
 });
 
 const image = tabsStore.getTabById(id);
-const imageUrl = new URL('/src/assets/images/' + image?.src, import.meta.url);
+const imageUrl = computed(() => new URL('/src/assets/images/' + image?.src, import.meta.url));
 </script>
 
 <template>

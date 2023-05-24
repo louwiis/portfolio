@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import tabsStore from '../stores/tabs';
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
 const props = defineProps({
   id: {
@@ -46,7 +46,7 @@ const drag = (e: MouseEvent) => {
   window.addEventListener('mouseup', mouseUp);
 }
 
-const imageUrl = new URL('/src/assets/images/' + tab?.icon, import.meta.url);
+const imageUrl = computed(() => new URL('/src/assets/images/' + tab?.icon, import.meta.url));
 </script>
 
 <template>
