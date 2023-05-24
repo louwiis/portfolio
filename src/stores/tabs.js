@@ -1,4 +1,7 @@
 import { reactive } from 'vue'
+import terminal from '../assets/images/terminal.png'
+import folder from '../assets/images/folder.png'
+import wallpaper from '../assets/images/wallpaper.jpg'
 
 export const tabsStore = reactive({
   state: {
@@ -6,7 +9,7 @@ export const tabsStore = reactive({
     apps: [
       {
         id: 'terminal',
-        icon: 'terminal.png',
+        icon: terminal,
         name: 'Le gentil terminal de Luis',
         isOpened: true,
         isMinimized: false,
@@ -21,7 +24,7 @@ export const tabsStore = reactive({
     folders: [
       {
         id: 'experiences',
-        icon: 'folder.png',
+        icon: folder,
         name: 'Mes expériences',
         isOpened: false,
         isMinimized: false,
@@ -39,7 +42,7 @@ export const tabsStore = reactive({
       },
       {
         id: 'agily',
-        icon: 'folder.png',
+        icon: folder,
         name: 'Agily',
         isOpened: false,
         isMinimized: false,
@@ -59,8 +62,8 @@ export const tabsStore = reactive({
     pictures: [
       {
         id: 'agily-picture',
-        icon: 'wallpaper.jpg',
-        src: 'wallpaper.jpg',
+        icon: wallpaper,
+        src: wallpaper,
         name: 'Ma première année chez Agily',
         isOpened: false,
         isMinimized: false,

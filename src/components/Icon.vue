@@ -45,8 +45,6 @@ const drag = (e: MouseEvent) => {
   window.addEventListener('mousemove', mouseMove);
   window.addEventListener('mouseup', mouseUp);
 }
-
-const imageUrl = computed(() => new URL('/src/assets/images/' + tab?.icon, import.meta.url));
 </script>
 
 <template>
@@ -61,7 +59,7 @@ const imageUrl = computed(() => new URL('/src/assets/images/' + tab?.icon, impor
     "
     @mousedown="drag"
   >
-    <img :src="imageUrl" :alt="tab?.name" />
+    <img :src="tab?.icon" :alt="tab?.name" />
     
     <div class="name">{{ tab?.name }}</div>
   </div>

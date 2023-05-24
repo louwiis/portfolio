@@ -13,10 +13,6 @@ const experiences = tabsStore.getTabById('experiences');
 const agily = tabsStore.getTabById('agily');
 
 const images = tabsStore.state.pictures;
-
-const getImageUrl = (url) => {
-  return computed(() => new URL('/src/assets/images/' + url, import.meta.url));
-}
 </script>
 
 <template>
@@ -32,8 +28,8 @@ const getImageUrl = (url) => {
 
     <div v-if="tabsStore.getActiveTabs().length > 0" class="menu">
       <div v-for="tab in tabsStore.getActiveTabs()" :key="tab.id" class="app">
-        <!-- <img :src="getImageUrl(tab.icon)" :alt="tab.name" @click="tabsStore.openTab(tab.id)" /> -->
-        <Icon :id="tab.id" />
+        <img :src="tab.icon" :alt="tab.name" @click="tabsStore.openTab(tab.id)" />
+        <!-- <Icon :id="tab.id" /> -->
 
         <div v-if="tab.isMinimized" class="minimize"></div>
       </div>
@@ -61,6 +57,7 @@ main {
     margin: 12px auto;
     width: fit-content;
     align-items: center;
+    gap: 8px;
 
 
     .icon {
