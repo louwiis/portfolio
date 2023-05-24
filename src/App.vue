@@ -54,6 +54,7 @@ import iphone from '@/assets/images/iphone.png'
       margin-top: 75vh;
 
       .image {
+        padding: 0 32px;
         width: 100%;
       }
 
