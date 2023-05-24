@@ -89,13 +89,6 @@ const drag = (e: MouseEvent) => {
   img {
     max-width: 70px;
     max-height: 70px;
-
-    // Disable dragging of the image
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
   }
 
   .name {

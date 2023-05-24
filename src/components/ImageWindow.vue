@@ -39,11 +39,8 @@ const image = tabsStore.getTabById(id);
   flex-wrap: wrap;
   width: 100%;
 
-  user-select: none;
-
   img {
     width: 100%;
-    user-select: none;
     min-width: 300px;
     min-height: 172px;
 
