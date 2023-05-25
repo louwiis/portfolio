@@ -1,12 +1,15 @@
 import { reactive } from 'vue'
 import terminal from '../assets/images/terminal.png'
 import folder from '../assets/images/folder.png'
-import wallpaper from '../assets/images/wallpaper.jpg'
 import note from '../assets/images/note.png'
 import trash from '../assets/images/trash.png'
 
-import agilyLogo from '../assets/images/agily-logo.svg'
-import agilyTeam from '../assets/images/agily-team.webp'
+// AGILY
+import agilySetup from '../assets/images/agily/setup.png'
+import agilyPoussin from '../assets/images/agily/poussin.png'
+import agilyPhoto1 from '../assets/images/agily/photo-1.jpg'
+import agilyPhoto2 from '../assets/images/agily/photo-2.png'
+import agilyPhoto3 from '../assets/images/agily/photo-3.jpg'
 
 export const tabsStore = reactive({
   state: {
@@ -77,10 +80,19 @@ export const tabsStore = reactive({
         y: 120,
         files: [
           {
-            id: 'agily-logo',
+            id: 'agily-photo-1',
           },
           {
-            id: 'agily-team',
+            id: 'agily-photo-2',
+          },
+          {
+            id: 'agily-setup',
+          },
+          {
+            id: 'agily-poussin',
+          },
+          {
+            id: 'agily-photo-3',
           },
         ],
       },
@@ -96,44 +108,80 @@ export const tabsStore = reactive({
         x: 120,
         y: 120,
         files: [
-          {
-            id: 'agily-logo',
-          },
-          {
-            id: 'agily-team',
-          },
         ],
       }
     ],
     pictures: [
       {
-        id: 'agily-logo',
-        icon: agilyLogo,
-        src: agilyLogo,
-        name: 'Le logo d\'Agily',
+        id: 'agily-setup',
+        icon: agilySetup,
+        src: agilySetup,
+        name: 'Mon setup chez Agily',
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
         width: 600,
         height: 400,
         x: 140,
-        y: 140, 
+        y: 140,
         ratio: '1.5'
       },
       {
-        id: 'agily-team',
-        icon: agilyTeam,
-        src: agilyTeam,
-        name: 'L\'équipe d\'Agily',
+        id: 'agily-poussin',
+        icon: agilyPoussin,
+        src: agilyPoussin,
+        name: 'Le poussin d\'Agily',
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
         width: 600,
         height: 400,
         x: 140,
-        y: 140, 
-        ratio: '2'
+        y: 140,
+        ratio: '1.5'
       },
+      {
+        id: 'agily-photo-1',
+        icon: agilyPhoto1,
+        src: agilyPhoto1,
+        name: 'Photo 1',
+        isOpened: false,
+        isMinimized: false,
+        isFullscreen: false,
+        width: 600,
+        height: 400,
+        x: 140,
+        y: 140,
+        ratio: '1.5'
+      },
+      {
+        id: 'agily-photo-2',
+        icon: agilyPhoto2,
+        src: agilyPhoto2,
+        name: 'Photo 2',
+        isOpened: false,
+        isMinimized: false,
+        isFullscreen: false,
+        width: 600,
+        height: 400,
+        x: 140,
+        y: 140,
+        ratio: '1.5'
+      },
+      {
+        id: 'agily-photo-3',
+        icon: agilyPhoto3,
+        src: agilyPhoto3,
+        name: 'Photo 3',
+        isOpened: false,
+        isMinimized: false,
+        isFullscreen: false,
+        width: 600,
+        height: 400,
+        x: 140,
+        y: 140,
+        ratio: '1.5'
+      }
     ],
     notes: [
       {

@@ -129,7 +129,7 @@ setTimeout(() => {
     animation-iteration-count: infinite;  /* Never stop waving :) */
     transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
     display: inline-block;
-
+    line-height: 16px;
     font-size: 14px;
   }
 
