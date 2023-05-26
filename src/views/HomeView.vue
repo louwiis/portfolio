@@ -28,7 +28,9 @@ const images = tabsStore.state.pictures;
 
     <div v-if="tabsStore.getActiveTabs().length > 0" class="menu">
       <div v-for="tab in tabsStore.getActiveTabs()" :key="tab.id" class="app">
-        <img :src="tab.icon" :alt="tab.name" @click="tabsStore.openTab(tab.id)" />
+        <img :src="tab.icon" :alt="tab.name" @click="tabsStore.openTab(tab.id)" unselectable="on" />
+
+        <div class="name">{{ tab.name }}</div>
 
         <div v-if="tab.isMinimized" class="minimize"></div>
       </div>
@@ -76,8 +78,29 @@ main {
       justify-content: center;
       align-items: center;
 
+      &:hover {
+        .name {
+          display: block;
+
+          position: absolute;
+          bottom: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: rgba(#FFFFFF, 0.1);
+          border-radius: 4px;
+          color: #FFFFFF;
+          padding: 4px 8px;
+          width: 150px;
+          text-align: center;
+        }
+      }
+
       img {
         width: 60px;
+      }
+
+      .name {
+        display: none;
       }
 
       .minimize {

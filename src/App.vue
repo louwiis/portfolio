@@ -11,9 +11,9 @@ import iphone from '@/assets/images/iphone.png'
     <div class="text">Hey, désolé mais il n'y a actuellement pas de version mobile du site! Mais bon, tu pourras un jour découvrir Luis sur ton téléphone, qui sait ?</div>
 
     <div class="iphone">
-      <img class="image" :src="iphone" alt="iphone" />
+      <img class="image" :src="iphone" alt="iphone" unselectable="on" />
 
-      <div class="smile">⏳ :)</div>
+      <div class="smile">⏳</div>
     </div>
   </div>
 </template>

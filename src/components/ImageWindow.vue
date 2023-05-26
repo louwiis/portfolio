@@ -18,11 +18,12 @@ const image = tabsStore.getTabById(id);
     <slot>
       <div class="image">
         <img 
+          unselectable="on"
           class="img"
           :src="image.src"
           :alt="image.src"
-          :style="{ width: image.isFullscreen ? '100%' : image.width + 'px', height: image.isFullscreen ? '100%' : image.height - 28 + 'px' }"
-          :class="{ portrait: image.ratio < image.width / image.height, landscape: image.ratio > image.width / image.height }"
+          :style="{ width: image.width + 'px', height: image.height - 26 + 'px' }"
+          :class="{ landscape: image.ratio > 1, portrait: image.ratio < 1 }"
          />
       </div>
     </slot>
@@ -43,18 +44,9 @@ const image = tabsStore.getTabById(id);
     width: 100%;
     min-width: 300px;
     min-height: 172px;
-
-    &.portrait {
-      max-height: 100%;
-      max-width: 100%;
-      object-fit: contain
-    }
-
-    &.landscape {
-      max-height: 100%;
-      max-width: 100%;
-      object-fit: contain;
-    }
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
   }
 }
 </style>

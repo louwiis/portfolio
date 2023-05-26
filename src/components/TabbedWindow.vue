@@ -20,6 +20,7 @@ const y = ref(tab?.y);
 
 const resize = (e: MouseEvent) => {
   if (tab?.isFullscreen) return;
+  e.preventDefault();
   
   const startX = e.clientX;
   const startY = e.clientY;
@@ -31,8 +32,13 @@ const resize = (e: MouseEvent) => {
     const dx = e.clientX - startX;
     const dy = e.clientY - startY;
 
-    width.value = startWidth + dx;
-    height.value = startHeight + dy;
+    if (startWidth + dx >= 300) {
+      width.value = startWidth + dx;
+    }
+
+    if (startHeight + dy >= 172) {
+      height.value = startHeight + dy;
+    }
 
     tabsStore.updateSize(tab?.id, { width: width.value, height: height.value });
   };
@@ -59,8 +65,13 @@ const drag = (e: MouseEvent) => {
     const dx = e.clientX - startX;
     const dy = e.clientY - startY;
 
-    x.value = startWidth + dx;
-    y.value = startHeight + dy;
+    if (startWidth + dx > 0) {
+      x.value = startWidth + dx;
+    }
+
+    if (startHeight + dy > 0) {
+      y.value = startHeight + dy;
+    }
 
     tabsStore.updatePosition(tab?.id, { x: x.value, y: y.value });
   };

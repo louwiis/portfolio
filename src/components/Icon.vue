@@ -59,7 +59,7 @@ const drag = (e: MouseEvent) => {
     "
     @mousedown="drag"
   >
-    <img :src="tab?.icon" :alt="tab?.name" />
+    <img :src="tab?.icon" :alt="tab?.name" unselectable="on" />
     
     <div class="name">{{ tab?.name }}</div>
   </div>

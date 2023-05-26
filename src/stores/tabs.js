@@ -13,7 +13,7 @@ import agilyPhoto3 from '../assets/images/agily/photo-3.jpg'
 
 export const tabsStore = reactive({
   state: {
-    selectedTab: null,
+    selectedTab: 'terminal',
     apps: [
       {
         id: 'terminal',
@@ -22,7 +22,9 @@ export const tabsStore = reactive({
         isOpened: true,
         isMinimized: false,
         isFullscreen: false,
+        previousWith: 600,
         width: 600,
+        previousHeight: 400,
         height: 400,
         x: 200,
         y: 150,
@@ -37,7 +39,9 @@ export const tabsStore = reactive({
         isMinimized: false,
         isFullscreen: false,
         isActive: false,
+        previousWith: 600,
         width: 600,
+        previousHeight: 400,
         height: 400,
         x: 100,
         y: 100,
@@ -54,7 +58,9 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
+        previousWith: 600,
         width: 600,
+        previousHeight: 400,
         height: 400,
         x: 120,
         y: 120,
@@ -74,7 +80,9 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
+        previousWith: 600,
         width: 600,
+        previousHeight: 400,
         height: 400,
         x: 120,
         y: 120,
@@ -103,7 +111,9 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
+        previousWith: 600,
         width: 600,
+        previousHeight: 400,
         height: 400,
         x: 120,
         y: 120,
@@ -120,7 +130,9 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
+        previousWith: 600,
         width: 600,
+        previousHeight: 400,
         height: 400,
         x: 140,
         y: 140,
@@ -134,7 +146,9 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
+        previousWith: 600,
         width: 600,
+        previousHeight: 400,
         height: 400,
         x: 140,
         y: 140,
@@ -148,7 +162,9 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
+        previousWith: 600,
         width: 600,
+        previousHeight: 400,
         height: 400,
         x: 140,
         y: 140,
@@ -162,7 +178,9 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
+        previousWith: 600,
         width: 600,
+        previousHeight: 400,
         height: 400,
         x: 140,
         y: 140,
@@ -176,7 +194,9 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
+        previousWith: 600,
         width: 600,
+        previousHeight: 400,
         height: 400,
         x: 140,
         y: 140,
@@ -191,7 +211,9 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
+        previousWith: 600,
         width: 600,
+        previousHeight: 400,
         height: 400,
         x: 160,
         y: 160,
@@ -203,7 +225,9 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
+        previousWith: 600,
         width: 600,
+        previousHeight: 400,
         height: 400,
         x: 160,
         y: 160,
@@ -248,7 +272,6 @@ export const tabsStore = reactive({
     const tab = this.getAllTabs().find((tab) => tab.id === id);
 
     tab.isOpened = false
-    tab.isFullscreen = false
   },
 
   minimizeTab(id) {
@@ -261,6 +284,16 @@ export const tabsStore = reactive({
     const tab = this.getAllTabs().find((tab) => tab.id === id)
 
     tab.isFullscreen = !tab.isFullscreen
+
+    if (tab.isFullscreen) {
+      tab.previousWith = tab.width
+      tab.previousHeight = tab.height
+      tab.width = window.innerWidth
+      tab.height = window.innerHeight
+    } else {
+      tab.width = tab.previousWith
+      tab.height = tab.previousHeight
+    }
   },
 
   updateSize(id, data) {
@@ -280,6 +313,10 @@ export const tabsStore = reactive({
   selectTab(id) {
     this.state.selectedTab = id
   },
+
+  closeSelectedTab() {
+    this.closeTab(this.state.selectedTab)
+  }
 });
 
 export default tabsStore;

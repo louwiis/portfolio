@@ -59,6 +59,8 @@ const folder = tabsStore.getTabById(id);
 
     .icon {
       position: inherit;
+      display: flex;
+      justify-content: center;
       
       :deep(img) {
         width: 50px !important;
