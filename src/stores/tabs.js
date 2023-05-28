@@ -19,7 +19,7 @@ export const tabsStore = reactive({
         id: 'terminal',
         icon: terminal,
         name: 'Le gentil terminal de Luis',
-        isOpened: true,
+        isOpened: false,
         isMinimized: false,
         isFullscreen: false,
         previousWith: 600,
@@ -31,6 +31,26 @@ export const tabsStore = reactive({
       },
     ],
     folders: [
+      {
+        id: 'personal',
+        icon: folder,
+        name: 'À propos de moi',
+        isOpened: false,
+        isMinimized: false,
+        isFullscreen: false,
+        isActive: false,
+        previousWith: 600,
+        width: 600,
+        previousHeight: 400,
+        height: 400,
+        x: 100,
+        y: 100,
+        files: [
+          {
+            id: 'note-aboutme',
+          }
+        ],
+      },
       {
         id: 'experiences',
         icon: folder,
@@ -205,10 +225,12 @@ export const tabsStore = reactive({
     ],
     notes: [
       {
-        id: 'agily-note',
+        id: 'note-aboutme',
         icon: note,
-        name: 'Résumé de mon expérience chez Agily',
-        isOpened: false,
+        name: 'Luis Teixeira Lima.txt',
+        content: "<div>Hey, <span class='wave'>👋🏼</span></div><div><br></div><div>Je suis Luis Teixeira Lima, un développeur junior de Paris.</div><div>J'ai commencé à coder pour m'amuser, mais désormais j'aimerais faire du code mon métier.</div><div><br></div><div>Actuellement, je suis un étudiant en fin de deuxième année dans le programme Web Development de l'école EPITECH Digital School à Paris.</div><div><br></div><div>Pendant mes cours j'apprends tout pleins de languages mais j'ai aussi tendance à travailler en dehors de l'école.</div><div><br></div><div>Lorsque je ne code pas, j'aime bien jouer aux jeux vidéo comme CS:GO et Minecraft, sortir dehors pour jouer au foot ou encore, manger avec des amis.</div><div><br></div><div>N'hésite pas à aller faire un tour dans mes expériences ou encore mes projets, il y a quelques trucs sympas à voir.</div>",
+        tmpContent: '',
+        isOpened: true,
         isMinimized: false,
         isFullscreen: false,
         previousWith: 600,
@@ -222,6 +244,7 @@ export const tabsStore = reactive({
         id: 'note-asquinas',
         icon: note,
         name: 'Résumé de mon expérience chez As Quinas',
+        content: '',
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
@@ -272,6 +295,10 @@ export const tabsStore = reactive({
     const tab = this.getAllTabs().find((tab) => tab.id === id);
 
     tab.isOpened = false
+
+    if (tab.tmpContent) {
+      tab.content = tab.tmpContent
+    }
   },
 
   minimizeTab(id) {
@@ -316,6 +343,12 @@ export const tabsStore = reactive({
 
   closeSelectedTab() {
     this.closeTab(this.state.selectedTab)
+  },
+
+  updateNoteContent(id, content) {
+    const note = this.state.notes.find((note) => note.id === id)
+
+    note.tmpContent = content
   }
 });
 

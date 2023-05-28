@@ -5,11 +5,13 @@ import { computed } from 'vue';
 import Icon from '../components/Icon.vue';;
 
 import TerminalWindow from '../components/TerminalWindow.vue';
+import NoteWindow from '../components/NoteWindow.vue';
 import FolderWindow from '../components/FolderWindow.vue';
 import ImageWindow from '../components/ImageWindow.vue';
 
 const terminal = tabsStore.getTabById('terminal');
 
+const notes = tabsStore.state.notes;
 const folders = tabsStore.state.folders;
 const images = tabsStore.state.pictures;
 </script>
@@ -19,8 +21,12 @@ const images = tabsStore.state.pictures;
     <Icon id="terminal" :x="16" :y="16" />
     <Icon id="experiences" :x="16" :y="144" />
     <Icon id="trash" :x="144" :y="16" />
+    <Icon id="personal" :x="144" :y="144" />
+
     
     <TerminalWindow v-if="terminal?.isOpened" />
+
+    <NoteWindow v-for="note in notes" :id="note.id" />
 
     <FolderWindow v-for="folder in folders" :id="folder.id"/>
 
