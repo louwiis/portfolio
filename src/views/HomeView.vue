@@ -22,6 +22,7 @@ const images = tabsStore.state.pictures;
     <Icon id="experiences" :x="16" :y="144" />
     <Icon id="trash" :x="144" :y="16" />
     <Icon id="personal" :x="144" :y="144" />
+    <Icon id="projects" :x="16" :y="272" />
 
     
     <TerminalWindow v-if="terminal?.isOpened" />

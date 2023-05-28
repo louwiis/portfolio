@@ -73,7 +73,7 @@ const drag = (e: MouseEvent) => {
 
   flex-direction: column;
   align-items: center;
-  max-width: 100px;
+  width: 100px;
   height: fit-content;
 
   cursor: pointer;

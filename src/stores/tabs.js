@@ -52,6 +52,26 @@ export const tabsStore = reactive({
         ],
       },
       {
+        id: 'projects',
+        icon: folder,
+        name: 'Mes projets',
+        isOpened: false,
+        isMinimized: false,
+        isFullscreen: false,
+        isActive: false,
+        previousWith: 600,
+        width: 600,
+        previousHeight: 400,
+        height: 400,
+        x: 100,
+        y: 100,
+        files: [
+          {
+            id: 'note-projects',
+          }
+        ],
+      },
+      {
         id: 'experiences',
         icon: folder,
         name: 'Mes expériences',
@@ -86,7 +106,7 @@ export const tabsStore = reactive({
         y: 120,
         files: [
           {
-            id: 'agily-note',
+            id: 'note-agily',
           },
           {
             id: 'agily-pictures',
@@ -241,10 +261,27 @@ export const tabsStore = reactive({
         y: 160,
       },
       {
-        id: 'note-asquinas',
+        id: 'note-projects',
         icon: note,
-        name: 'Résumé de mon expérience chez As Quinas',
-        content: '',
+        name: 'Mes projets',
+        content: "Pour le moment je n'ai pas vraiment de projets personnels concrets.<div>Mais malgré cela, je m'amuse de temps en temps à faire quelques trucs en dehors du travail ou de l'école.</div><div><br></div><div><div>Cependant, si vous souhaitez voir un peu de mon code et bien des exercices que j'ai pu faire lors de mes cours, des scripts ou encore des tutos pour des amis à l'école sont trouvables sur mon github.</div><div><br></div><div>Si jamais cela vous intéresse n'hésitez pas ! Mon github se trouve dans mon dossier 'mes réseaux'</div></div>",
+        tmpContent: '',
+        isOpened: false,
+        isMinimized: false,
+        isFullscreen: false,
+        previousWith: 600,
+        width: 600,
+        previousHeight: 400,
+        height: 400,
+        x: 160,
+        y: 160,
+      },
+      {
+        id: 'note-agily',
+        icon: note,
+        name: 'Résumé de mon expérience chez Agily',
+        content: "La première entreprise pour laquelle j'ai travaillé dans le monde du web est Agily.<div><br></div><div>Agily c'est une agence web qui a été fondée en 2020 par Stéphane Paillard, Tal Stanislas ainsi que Jean-François Arbona.&nbsp;</div><div><br></div><div>J'ai eu la chance de travailler plusieurs fois pour cette boîte. Lors de mon premier stage, juste après lors d'une période de freelance et lors de mon second stage Agily a été un moteur à ma progression personnelle.</div>",
+        tmpContent: '',
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
