@@ -3,6 +3,9 @@ import terminal from '../assets/images/terminal.png'
 import folder from '../assets/images/folder.png'
 import note from '../assets/images/note.png'
 import trash from '../assets/images/trash.png'
+import github from '../assets/images/github.png'
+import linkedin from '../assets/images/linkedin.png'
+import mail from '../assets/images/mail.png'
 
 // AGILY
 import agilySetup from '../assets/images/agily/setup.png'
@@ -22,7 +25,7 @@ export const tabsStore = reactive({
         isOpened: true,
         isMinimized: false,
         isFullscreen: false,
-        previousWith: 600,
+        previousWidth: 600,
         width: 600,
         previousHeight: 400,
         height: 400,
@@ -38,8 +41,7 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
-        isActive: false,
-        previousWith: 600,
+        previousWidth: 600,
         width: 600,
         previousHeight: 400,
         height: 400,
@@ -48,27 +50,16 @@ export const tabsStore = reactive({
         files: [
           {
             id: 'note-aboutme',
-          }
-        ],
-      },
-      {
-        id: 'projects',
-        icon: folder,
-        name: 'Mes projets',
-        isOpened: false,
-        isMinimized: false,
-        isFullscreen: false,
-        isActive: false,
-        previousWith: 600,
-        width: 600,
-        previousHeight: 400,
-        height: 400,
-        x: 100,
-        y: 100,
-        files: [
+          },
           {
-            id: 'note-projects',
-          }
+            id: 'mail',
+          },
+          {
+            id: 'github',
+          },
+          {
+            id: 'linkedin',
+          },
         ],
       },
       {
@@ -78,8 +69,7 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
-        isActive: false,
-        previousWith: 600,
+        previousWidth: 600,
         width: 600,
         previousHeight: 400,
         height: 400,
@@ -92,13 +82,32 @@ export const tabsStore = reactive({
         ],
       },
       {
+        id: 'projects',
+        icon: folder,
+        name: 'Mes projets',
+        isOpened: false,
+        isMinimized: false,
+        isFullscreen: false,
+        previousWidth: 600,
+        width: 600,
+        previousHeight: 400,
+        height: 400,
+        x: 100,
+        y: 100,
+        files: [
+          {
+            id: 'note-projects',
+          }
+        ],
+      },
+      {
         id: 'agily',
         icon: folder,
         name: 'Agily',
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
-        previousWith: 600,
+        previousWidth: 600,
         width: 600,
         previousHeight: 400,
         height: 400,
@@ -120,7 +129,7 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
-        previousWith: 600,
+        previousWidth: 600,
         width: 600,
         previousHeight: 400,
         height: 400,
@@ -151,7 +160,7 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
-        previousWith: 600,
+        previousWidth: 600,
         width: 600,
         previousHeight: 400,
         height: 400,
@@ -170,7 +179,7 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
-        previousWith: 600,
+        previousWidth: 600,
         width: 600,
         previousHeight: 400,
         height: 400,
@@ -186,7 +195,7 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
-        previousWith: 600,
+        previousWidth: 600,
         width: 600,
         previousHeight: 400,
         height: 400,
@@ -202,7 +211,7 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
-        previousWith: 600,
+        previousWidth: 600,
         width: 600,
         previousHeight: 400,
         height: 400,
@@ -218,7 +227,7 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
-        previousWith: 600,
+        previousWidth: 600,
         width: 600,
         previousHeight: 400,
         height: 400,
@@ -234,7 +243,7 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
-        previousWith: 600,
+        previousWidth: 600,
         width: 600,
         previousHeight: 400,
         height: 400,
@@ -253,7 +262,7 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
-        previousWith: 600,
+        previousWidth: 600,
         width: 600,
         previousHeight: 400,
         height: 400,
@@ -269,7 +278,7 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
-        previousWith: 600,
+        previousWidth: 600,
         width: 600,
         previousHeight: 400,
         height: 400,
@@ -285,12 +294,32 @@ export const tabsStore = reactive({
         isOpened: false,
         isMinimized: false,
         isFullscreen: false,
-        previousWith: 600,
+        previousWidth: 600,
         width: 600,
         previousHeight: 400,
         height: 400,
         x: 160,
         y: 160,
+      },
+    ],
+    links: [
+      {
+        id: 'github',
+        icon: github,
+        name: 'Github',
+        url: 'https://github.com/louwiis',
+      },
+      {
+        id: 'linkedin',
+        icon: linkedin,
+        name: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/luis-teixeira-lima-33b580234/',
+      },
+      {
+        id: 'mail',
+        icon: mail,
+        name: 'Mail',
+        url: 'mailto:luis.teixeira-lima@outlook.com',
       },
     ]
   },
@@ -301,6 +330,7 @@ export const tabsStore = reactive({
       ...this.state.folders,
       ...this.state.pictures,
       ...this.state.notes,
+      ...this.state.links,
     ]
 
     return tabs.find((tab) => tab.id === id)
@@ -321,9 +351,8 @@ export const tabsStore = reactive({
 
   openTab(id) {
     const tab = this.getAllTabs().find((tab) => tab.id === id);
-
+    
     tab.isOpened = true
-    tab.isActive = true
     tab.isMinimized = false
     this.selectTab(id)
   },
@@ -350,12 +379,12 @@ export const tabsStore = reactive({
     tab.isFullscreen = !tab.isFullscreen
 
     if (tab.isFullscreen) {
-      tab.previousWith = tab.width
+      tab.previousWidth = tab.width
       tab.previousHeight = tab.height
       tab.width = window.innerWidth
       tab.height = window.innerHeight
     } else {
-      tab.width = tab.previousWith
+      tab.width = tab.previousWidth
       tab.height = tab.previousHeight
     }
   },

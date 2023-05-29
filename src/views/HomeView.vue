@@ -28,14 +28,12 @@ const images = tabsStore.state.pictures;
     <TerminalWindow v-if="terminal?.isOpened" />
 
     <NoteWindow v-for="note in notes" :id="note.id" />
-
     <FolderWindow v-for="folder in folders" :id="folder.id"/>
-
     <ImageWindow v-for="image in images" :id="image.id"/>
 
     <div v-if="tabsStore.getActiveTabs().length > 0" class="menu">
-      <div v-for="tab in tabsStore.getActiveTabs()" :key="tab.id" class="app">
-        <img :src="tab.icon" :alt="tab.name" @click="tabsStore.openTab(tab.id)" unselectable="on" />
+      <div v-for="tab in tabsStore.getActiveTabs()" :key="tab.id" class="app" @click="tabsStore.openTab(tab.id)">
+        <img :src="tab.icon" :alt="tab.name" unselectable="on" />
 
         <div class="name">{{ tab.name }}</div>
 
@@ -68,14 +66,6 @@ main {
     align-items: center;
     gap: 8px;
 
-    .icon {
-      position: inherit;
-
-      :deep(.name) {
-        display: none;
-      }
-    }
-
     .app {
       height: 60px;
       position: relative;
@@ -85,19 +75,28 @@ main {
       justify-content: center;
       align-items: center;
 
+      .icon {
+        position: inherit;
+
+        :deep(.name) {
+          display: none;
+        }
+      }
+      
       &:hover {
         .name {
           display: block;
 
           position: absolute;
-          bottom: 100%;
+          bottom: 120%;
           left: 50%;
           transform: translateX(-50%);
-          background-color: rgba(#FFFFFF, 0.1);
+          background-color: rgba(#000000, 0.8);
+          
           border-radius: 4px;
           color: #FFFFFF;
           padding: 4px 8px;
-          width: 150px;
+          white-space: nowrap;
           text-align: center;
         }
       }

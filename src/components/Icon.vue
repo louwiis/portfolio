@@ -17,6 +17,17 @@ const props = defineProps({
   },
 });
 
+const openTab = (id: string) => {
+  const tab = tabsStore.getTabById(id);
+
+  if (tab?.url) {
+    window.open(tab.url, '_blank');
+    return;
+  }
+
+  tabsStore.openTab(id);
+};
+
 const tab = tabsStore.getTabById(props.id);
 
 const x = ref(props.x);
@@ -52,11 +63,7 @@ const drag = (e: MouseEvent) => {
     class="icon"
     :class="{ image: tab?.ratio }"
     :style="{ top: y + 'px', left: x + 'px' }"
-    @dblclick="
-      () => {
-        tabsStore.openTab(id)
-      }
-    "
+    @dblclick="openTab(tab?.id)"
     @mousedown="drag"
   >
     <img :src="tab?.icon" :alt="tab?.name" unselectable="on" />
