@@ -19,10 +19,10 @@ const images = tabsStore.state.pictures;
 <template>
   <main>
     <Icon id="terminal" :x="16" :y="16" />
-    <Icon id="experiences" :x="16" :y="144" />
+    <Icon id="experiences" :x="16" :y="272" />
     <Icon id="trash" :x="144" :y="16" />
-    <Icon id="personal" :x="144" :y="144" />
-    <Icon id="projects" :x="16" :y="272" />
+    <Icon id="personal" :x="16" :y="144" />
+    <Icon id="projects" :x="16" :y="400" />
 
     
     <TerminalWindow v-if="terminal?.isOpened" />
