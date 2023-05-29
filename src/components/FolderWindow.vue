@@ -19,8 +19,8 @@ const folder = tabsStore.getTabById(id);
     <slot>
       <div class="folder">
         <div class="icons">
-          <div v-for="file in folder.files" :key="file.id" class="icon">
-            <Icon :id="file.id" />
+          <div v-for="file in folder.files" :key="file" class="icon">
+            <Icon :id="file" />
           </div>
         </div>
       </div>

@@ -48,18 +48,10 @@ export const tabsStore = reactive({
         x: 100,
         y: 100,
         files: [
-          {
-            id: 'note-aboutme',
-          },
-          {
-            id: 'mail',
-          },
-          {
-            id: 'github',
-          },
-          {
-            id: 'linkedin',
-          },
+          'note-aboutme',
+          'mail',
+          'github',
+          'linkedin',
         ],
       },
       {
@@ -76,9 +68,7 @@ export const tabsStore = reactive({
         x: 100,
         y: 100,
         files: [
-          {
-            id: 'agily',
-          }
+          'agily',
         ],
       },
       {
@@ -95,9 +85,7 @@ export const tabsStore = reactive({
         x: 100,
         y: 100,
         files: [
-          {
-            id: 'note-projects',
-          }
+          'note-projects',
         ],
       },
       {
@@ -114,12 +102,8 @@ export const tabsStore = reactive({
         x: 120,
         y: 120,
         files: [
-          {
-            id: 'note-agily',
-          },
-          {
-            id: 'agily-pictures',
-          },
+          'note-agily',
+          'agily-pictures',
         ],
       },
       {
@@ -136,21 +120,11 @@ export const tabsStore = reactive({
         x: 120,
         y: 120,
         files: [
-          {
-            id: 'agily-photo-1',
-          },
-          {
-            id: 'agily-photo-2',
-          },
-          {
-            id: 'agily-setup',
-          },
-          {
-            id: 'agily-poussin',
-          },
-          {
-            id: 'agily-photo-3',
-          },
+          'agily-photo-1',
+          'agily-photo-2',
+          'agily-setup',
+          'agily-poussin',
+          'agily-photo-3',
         ],
       },
       {
