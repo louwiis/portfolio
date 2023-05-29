@@ -102,7 +102,8 @@ main {
       }
 
       img {
-        width: 60px;
+        max-width: 60px;
+        max-height: 60px;
       }
 
       .name {

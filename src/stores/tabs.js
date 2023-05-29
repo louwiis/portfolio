@@ -14,6 +14,9 @@ import agilyPhoto1 from '../assets/images/agily/photo-1.jpg'
 import agilyPhoto2 from '../assets/images/agily/photo-2.jpg'
 import agilyPhoto3 from '../assets/images/agily/photo-3.jpg'
 
+// PRIVATE
+import winnie from '../assets/images/private/winnie.jpg'
+
 export const tabsStore = reactive({
   state: {
     selectedTab: 'terminal',
@@ -142,10 +145,26 @@ export const tabsStore = reactive({
         x: 120,
         y: 120,
         files: [
+          'winnie'
         ],
       }
     ],
     pictures: [
+      {
+        id: 'winnie',
+        icon: winnie,
+        src: winnie,
+        name: 'Mon doudou Winnie',
+        isOpened: false,
+        isMinimized: false,
+        isFullscreen: false,
+        previousWidth: 600,
+        width: 600,
+        previousHeight: 400,
+        height: 400,
+        x: 140,
+        y: 140,
+      },
       {
         id: 'agily-setup',
         icon: agilySetup,
@@ -160,7 +179,6 @@ export const tabsStore = reactive({
         height: 400,
         x: 140,
         y: 140,
-        ratio: '1.5'
       },
       {
         id: 'agily-poussin',
@@ -176,7 +194,6 @@ export const tabsStore = reactive({
         height: 400,
         x: 140,
         y: 140,
-        ratio: '1.5'
       },
       {
         id: 'agily-photo-1',
@@ -192,7 +209,6 @@ export const tabsStore = reactive({
         height: 400,
         x: 140,
         y: 140,
-        ratio: '1.5'
       },
       {
         id: 'agily-photo-2',
@@ -208,7 +224,6 @@ export const tabsStore = reactive({
         height: 400,
         x: 140,
         y: 140,
-        ratio: '1.5'
       },
       {
         id: 'agily-photo-3',
@@ -224,7 +239,6 @@ export const tabsStore = reactive({
         height: 400,
         x: 140,
         y: 140,
-        ratio: '1.5'
       }
     ],
     notes: [
@@ -248,7 +262,7 @@ export const tabsStore = reactive({
         id: 'note-projects',
         icon: note,
         name: 'Mes projets',
-        content: "Pour le moment je n'ai pas vraiment de projets personnels concrets.<div>Mais malgré cela, je m'amuse de temps en temps à faire quelques trucs en dehors du travail ou de l'école.</div><div><br></div><div><div>Cependant, si vous souhaitez voir un peu de mon code et bien des exercices que j'ai pu faire lors de mes cours, des scripts ou encore des tutos pour des amis à l'école sont trouvables sur mon github.</div><div><br></div><div>En tout cas, si jamais cela vous intéresse n'hésitez pas à y faire un tour !</div></div>",
+        content: "Pour le moment je n'ai pas vraiment de projets personnels concrets.<div>Mais malgré cela, je m'amuse de temps en temps à faire quelques trucs en dehors du travail ou de l'école.</div><div><br></div><div><div>Cependant si vous souhaitez voir un peu de mon code, des exercices que j'ai pu faire lors de mes cours, des scripts ou encore des tutos pour des amis d'école sont trouvables sur mon github.</div><div><br></div></div>",
         tmpContent: '',
         isOpened: false,
         isMinimized: false,
