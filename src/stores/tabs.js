@@ -11,7 +11,7 @@ import mail from '../assets/images/mail.png'
 import agilySetup from '../assets/images/agily/setup.png'
 import agilyPoussin from '../assets/images/agily/poussin.png'
 import agilyPhoto1 from '../assets/images/agily/photo-1.jpg'
-import agilyPhoto2 from '../assets/images/agily/photo-2.png'
+import agilyPhoto2 from '../assets/images/agily/photo-2.jpg'
 import agilyPhoto3 from '../assets/images/agily/photo-3.jpg'
 
 export const tabsStore = reactive({
@@ -86,6 +86,7 @@ export const tabsStore = reactive({
         y: 100,
         files: [
           'note-projects',
+          'github',
         ],
       },
       {
@@ -247,7 +248,7 @@ export const tabsStore = reactive({
         id: 'note-projects',
         icon: note,
         name: 'Mes projets',
-        content: "Pour le moment je n'ai pas vraiment de projets personnels concrets.<div>Mais malgré cela, je m'amuse de temps en temps à faire quelques trucs en dehors du travail ou de l'école.</div><div><br></div><div><div>Cependant, si vous souhaitez voir un peu de mon code et bien des exercices que j'ai pu faire lors de mes cours, des scripts ou encore des tutos pour des amis à l'école sont trouvables sur mon github.</div><div><br></div><div>Si jamais cela vous intéresse n'hésitez pas ! Mon github se trouve dans mon dossier 'mes réseaux'</div></div>",
+        content: "Pour le moment je n'ai pas vraiment de projets personnels concrets.<div>Mais malgré cela, je m'amuse de temps en temps à faire quelques trucs en dehors du travail ou de l'école.</div><div><br></div><div><div>Cependant, si vous souhaitez voir un peu de mon code et bien des exercices que j'ai pu faire lors de mes cours, des scripts ou encore des tutos pour des amis à l'école sont trouvables sur mon github.</div><div><br></div><div>En tout cas, si jamais cela vous intéresse n'hésitez pas à y faire un tour !</div></div>",
         tmpContent: '',
         isOpened: false,
         isMinimized: false,
