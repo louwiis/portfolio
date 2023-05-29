@@ -63,7 +63,8 @@ const folder = tabsStore.getTabById(id);
       justify-content: center;
       
       :deep(img) {
-        width: 50px !important;
+        max-width: 50px !important;
+        max-height: 50px;
       }
     }
   }

@@ -6,6 +6,8 @@ import trash from '../assets/images/trash.png'
 import github from '../assets/images/github.png'
 import linkedin from '../assets/images/linkedin.png'
 import mail from '../assets/images/mail.png'
+import cv from '../assets/images/cv.pdf'
+import cvIcon from '../assets/images/cv-icon.png'
 
 // AGILY
 import agilySetup from '../assets/images/agily/setup.png'
@@ -55,6 +57,7 @@ export const tabsStore = reactive({
           'mail',
           'github',
           'linkedin',
+          'cv',
         ],
       },
       {
@@ -309,6 +312,12 @@ export const tabsStore = reactive({
         icon: mail,
         name: 'Mail',
         url: 'mailto:luis.teixeira-lima@outlook.com',
+      },
+      {
+        id: 'cv',
+        icon: cvIcon,
+        name: 'CV',
+        url: cv,
       },
     ]
   },
