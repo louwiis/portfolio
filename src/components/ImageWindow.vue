@@ -1,7 +1,7 @@
 <script setup>
 import tabsStore from '../stores/tabs';
 import TabbedWindow from './TabbedWindow.vue';
-import { computed, defineProps } from 'vue';
+import { computed } from 'vue';
 
 const { id } = defineProps({
   id: {
